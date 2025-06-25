@@ -12,13 +12,14 @@ In today’s competitive tech industry, a portfolio is more than just a resume �
 - 🛠️ Skills section for highlighting technologies used
 - 👤 About section to introduce myself
 - 📱 Fully responsive layout for all devices
-- 🌙 Dark mode (optional, if implemented)
+- 🌙 Dark mode and Light mode featured
+- 📬 Contact form for direct communication
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript / React + Vite (if used)
+- **Frontend**:  React + Vite 
 - **Styling**: Tailwind CSS
-- **Icons**: Lucide React (optional)
+- **Icons**: Lucide React 
 
 ## 📷 Screenshots
 
@@ -31,3 +32,6 @@ In today’s competitive tech industry, a portfolio is more than just a resume �
 ```bash
 git clone https://github.com/your-username/My-Portfolio.git
 cd My-Portfolio
+
+npm install
+npm run dev
