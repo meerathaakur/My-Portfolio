@@ -3,128 +3,128 @@ import { Calendar, Building2, GraduationCap, Award } from 'lucide-react';
 import PropTypes from 'prop-types';
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState('work');
+  const [activeTab, setActiveTab] = useState('education');
 
-  const workExperience = [
-    {
-      id: 1,
-      title: 'Senior Full Stack Developer',
-      organization: 'Tech Innovations Inc.',
-      period: 'Jan 2023 - Present',
-      description: [
-        'Lead developer for a team of 5 engineers building a SaaS platform using the MERN stack',
-        'Implemented authentication system with JWT and role-based access control',
-        'Optimized database queries resulting in 40% improved performance',
-        'Integrated payment processing with Stripe and implemented subscription management',
-      ],
-      icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      id: 2,
-      title: 'Full Stack Developer',
-      organization: 'WebSolutions Co.',
-      period: 'Mar 2021 - Dec 2022',
-      description: [
-        'Developed and maintained multiple client projects using React, Node.js, and MongoDB',
-        'Created RESTful APIs with Express.js for mobile and web applications',
-        'Implemented real-time features using Socket.io for a collaborative tool',
-        'Worked closely with UI/UX designers to implement responsive designs',
-      ],
-      icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      id: 3,
-      title: 'Frontend Developer',
-      organization: 'Digital Agency',
-      period: 'Jun 2020 - Feb 2021',
-      description: [
-        'Built responsive websites and web applications using React and Next.js',
-        'Implemented UI components with styled-components and Material-UI',
-        'Collaborated with backend developers to integrate API endpoints',
-        'Optimized website performance and SEO',
-      ],
-      icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-  ];
+  // const workExperience = [
+  //   {
+  //     id: 1,
+  //     title: 'Senior Full Stack Developer',
+  //     organization: 'Tech Innovations Inc.',
+  //     period: 'Jan 2023 - Present',
+  //     description: [
+  //       'Lead developer for a team of 5 engineers building a SaaS platform using the MERN stack',
+  //       'Implemented authentication system with JWT and role-based access control',
+  //       'Optimized database queries resulting in 40% improved performance',
+  //       'Integrated payment processing with Stripe and implemented subscription management',
+  //     ],
+  //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Full Stack Developer',
+  //     organization: 'WebSolutions Co.',
+  //     period: 'Mar 2021 - Dec 2022',
+  //     description: [
+  //       'Developed and maintained multiple client projects using React, Node.js, and MongoDB',
+  //       'Created RESTful APIs with Express.js for mobile and web applications',
+  //       'Implemented real-time features using Socket.io for a collaborative tool',
+  //       'Worked closely with UI/UX designers to implement responsive designs',
+  //     ],
+  //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Frontend Developer',
+  //     organization: 'Digital Agency',
+  //     period: 'Jun 2020 - Feb 2021',
+  //     description: [
+  //       'Built responsive websites and web applications using React and Next.js',
+  //       'Implemented UI components with styled-components and Material-UI',
+  //       'Collaborated with backend developers to integrate API endpoints',
+  //       'Optimized website performance and SEO',
+  //     ],
+  //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  // ];
 
   const education = [
     {
       id: 1,
-      title: 'Master of Computer Science',
-      organization: 'Tech University',
-      period: '2018 - 2020',
+      title: 'Bachelor of Commerce',
+      organization: 'GCW Faridabad, (MDU)',
+      period: '2019 - 2022',
       description: [
-        'Specialized in Software Engineering and Algorithms',
-        'Thesis: "Optimizing Graph Algorithms for Social Network Analysis"',
-        'GPA: 3.9/4.0',
-        'Teaching Assistant for Data Structures and Algorithms course',
+        'Degree in Commerce with focus on business management',
+        'Good Communication Skills',
+        // 'GPA: 5.6/10.0',
+        // 'Teaching Assistant for Data Structures and Algorithms course',
       ],
       icon: <GraduationCap size={20} className="text-blue-600 dark:text-blue-400" />,
     },
     {
       id: 2,
-      title: 'Bachelor of Computer Science',
-      organization: 'State University',
-      period: '2014 - 2018',
+      title: 'Full Stack Web Development',
+      organization: 'Masai School',
+      period: '2024 - 2025',
       description: [
-        'Major in Computer Science with minor in Mathematics',
-        'Capstone Project: "Real-time Collaborative Code Editor"',
-        'Dean\'s List for 6 consecutive semesters',
-        'Active member of the Coding Club and Hackathon Team',
+        'Backend Development in Node.js (Javascript). and System Design in TypeScript.',
+        'Frontend in React, Redux, and Tailwind CSS',
+        'Collaborator in both Solo and Group Projects',
+        'Participated in multiple hackathons and coding challenges',
       ],
       icon: <GraduationCap size={20} className="text-blue-600 dark:text-blue-400" />,
     },
   ];
 
-  const achievements = [
-    {
-      id: 1,
-      title: 'Hackathon Winner',
-      organization: 'TechFest 2023',
-      period: 'Nov 2023',
-      description: [
-        'First place winner for developing an AI-powered accessibility tool',
-        'Implemented machine learning models for real-time analysis',
-        'Built the entire solution in 48 hours with a team of 3',
-      ],
-      icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      id: 2,
-      title: 'Top Contributor',
-      organization: 'Open Source Project',
-      period: '2022',
-      description: [
-        'Recognized as a top contributor to a popular open source React library',
-        'Implemented key features and fixed critical bugs',
-        'Improved test coverage from 70% to 95%',
-      ],
-      icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      id: 3,
-      title: 'Competitive Programming',
-      organization: 'CodeChef & LeetCode',
-      period: '2019 - Present',
-      description: [
-        'Solved 500+ problems on LeetCode and CodeChef',
-        'Reached 5-star rating on CodeChef',
-        'Ranked in top 5% in multiple coding competitions',
-      ],
-      icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
-    },
-  ];
+  // const achievements = [
+  //   {
+  //     id: 1,
+  //     title: 'Hackathon Participant',
+  //     organization: 'xto10x Hackathon',
+  //     period: 'Nov 2023',
+  //     description: [
+  //       'Created a real-time traffic management dashboard using React and Firebase',
+  //       'Beginner-friendly UI with interactive charts and maps',
+  //       'Built the entire solution in 48 hours with a team of 3',
+  //     ],
+  //     icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Top Contributor',
+  //     organization: 'Open Source Project',
+  //     period: '2022',
+  //     description: [
+  //       'Recognized as a top contributor to a popular open source React library',
+  //       'Implemented key features and fixed critical bugs',
+  //       'Improved test coverage from 70% to 95%',
+  //     ],
+  //     icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Competitive Programming',
+  //     organization: 'CodeChef & LeetCode',
+  //     period: '2019 - Present',
+  //     description: [
+  //       'Solved 500+ problems on LeetCode and CodeChef',
+  //       'Reached 5-star rating on CodeChef',
+  //       'Ranked in top 5% in multiple coding competitions',
+  //     ],
+  //     icon: <Award size={20} className="text-blue-600 dark:text-blue-400" />,
+  //   },
+  // ];
 
   const timelineData = {
-    work: workExperience,
+    // work: workExperience,
     education: education,
-    achievements: achievements,
+    // achievements: achievements,
   };
 
   const tabs = [
-    { id: 'work', label: 'Work Experience', icon: <Building2 size={20} /> },
+    // { id: 'work', label: 'Work Experience', icon: <Building2 size={20} /> },
     { id: 'education', label: 'Education', icon: <GraduationCap size={20} /> },
-    { id: 'achievements', label: 'Achievements', icon: <Award size={20} /> },
+    // { id: 'achievements', label: 'Achievements', icon: <Award size={20} /> },
   ];
 
   return (
