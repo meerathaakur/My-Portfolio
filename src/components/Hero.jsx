@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 // import { useTheme } from '../context/ThemeContext';
 
 const Hero = () => {
@@ -50,7 +50,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            MERN stack developer specialized in creating responsive, user-friendly applications. 
+            MERN stack developer specialized in creating responsive, user-friendly applications.
             Problem solver with strong DSA knowledge and a passion for clean, efficient code.
           </p>
 
@@ -95,6 +95,20 @@ const Hero = () => {
                 size={24}
                 className="text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
               />
+            </a>
+
+          </div>
+          <div className="flex gap-2 justify-center items-center">
+            {/* <!-- View Resume Button --> */}
+            <a href="https://drive.google.com/file/d/1XivVhHXCgQOxAwl6bo4DPORxji-IoAh_/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-3 rounded-lg bg-blue-600 dark:bg-slate-800 hover:bg-blue-700 dark:hover:bg-slate-700 text-white dark:text-white border border-slate-300 dark:border-slate-700 font-medium transition-colors duration-300 shadow-md hover:shadow-lg w-full sm:w-auto">
+                View Resume
+              </button>
+            </a>
+
+            {/* <!-- Download Resume Button --> */}
+            <a href="/MeeraSharma-GeneralProfessional-XDrL.pdf" className='flex items-center border border-slate-300 dark:border-slate-700 rounded-lg p-2 hover:bg-slate-100 dark:hover:bg-slate-700' download>
+              <Download />
             </a>
           </div>
         </div>
