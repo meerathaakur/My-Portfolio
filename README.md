@@ -23,14 +23,14 @@ In today’s competitive tech industry, a portfolio is more than just a resume �
 
 ## 📷 Screenshots
 
-> *(You can add screenshots or demo GIFs of your portfolio site here)*
+![Screenshot](./public/portfolio.png)
 
 ## 🧩 Getting Started
 
 ### Clone the repo
 
 ```bash
-git clone https://github.com/your-username/My-Portfolio.git
+git clone https://github.com/meerathaakur/My-Portfolio.git
 cd My-Portfolio
 
 npm install
