@@ -1,24 +1,50 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 // import { useTheme } from '../context/ThemeContext';
+const lines = [
+  'Building digital experiences with code and creativity',
+  'Crafting performant applications with MERN stack',
+  'Passionate about clean and maintainable code',
+];
 
 const Hero = () => {
   // const { theme } = useTheme();
-  const titleRef = useRef(null);
+  const [text, setText] = useState('');
+  const [lineIndex, setLineIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+
 
   useEffect(() => {
-    const titleElement = titleRef.current;
-    if (!titleElement) return;
+    const currentLine = lines[lineIndex % lines.length];
 
-    const text = titleElement.innerText;
-    titleElement.innerHTML = '';
+    let timeout;
 
-    text.split('').forEach((char, index) => {
-      setTimeout(() => {
-        titleElement.innerHTML += char;
-      }, 100 * index);
-    });
-  }, []);
+    if (!isDeleting && charIndex <= currentLine.length) {
+      timeout = setTimeout(() => {
+        setText(currentLine.substring(0, charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 60);
+    } else if (isDeleting && charIndex >= 0) {
+      timeout = setTimeout(() => {
+        setText(currentLine.substring(0, charIndex));
+        setCharIndex((prev) => prev - 1);
+      }, 30);
+    } else {
+      if (!isDeleting) {
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 1500);
+      } else {
+        setIsDeleting(false);
+        setLineIndex((prev) => (prev + 1) % lines.length);
+        setCharIndex(0);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, lineIndex, lines]);
 
   return (
     <section
@@ -37,16 +63,20 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 z-10">
+        <h4 className="text-2xl md:text-3xl text-center text-white-300 font-light italic tracking-wide mb-6">
+          Meera Sharma...
+        </h4>
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30">
-            <p className="text-blue-600 dark:text-blue-400 font-medium">Full Stack Developer</p>
+            <p className="text-blue-600 dark:text-blue-400 font-medium">Full Stack Web Developer</p>
           </div>
 
           <h1
-            ref={titleRef}
+
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
-            Building digital experiences with code and creativity
+            {text}
+            <span className="animate-pulse">|</span>
           </h1>
 
           <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
@@ -100,15 +130,14 @@ const Hero = () => {
           </div>
           <div className="flex gap-2 justify-center items-center">
             {/* <!-- View Resume Button --> */}
-            <a href="https://drive.google.com/file/d/1XivVhHXCgQOxAwl6bo4DPORxji-IoAh_/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <button className="px-6 py-3 rounded-lg bg-blue-600 dark:bg-slate-800 hover:bg-blue-700 dark:hover:bg-slate-700 text-white dark:text-white border border-slate-300 dark:border-slate-700 font-medium transition-colors duration-300 shadow-md hover:shadow-lg w-full sm:w-auto">
-                View Resume
-              </button>
-            </a>
-
-            {/* <!-- Download Resume Button --> */}
-            <a href="/MeeraSharma-GeneralProfessional-XDrL.pdf" className='flex items-center border border-slate-300 dark:border-slate-700 rounded-lg p-2 hover:bg-slate-100 dark:hover:bg-slate-700' download>
-              <Download />
+            <a
+              href="https://drive.google.com/uc?export=download&id=1XivVhHXCgQOxAwl6bo4DPORxji-IoAh_"
+              target='_blank'
+              download
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 dark:bg-slate-800 hover:bg-blue-700 dark:hover:bg-slate-700 text-white font-medium transition-colors duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
             </a>
           </div>
         </div>
@@ -124,7 +153,7 @@ const Hero = () => {
           <ArrowDown size={20} />
         </a>
       </div>
-    </section>
+    </section >
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Loader2, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Loader2, Linkedin, Github, Twitter, LinkedinIcon } from 'lucide-react';
 import PropTypes from 'prop-types';
 
 import toast from 'react-hot-toast';
@@ -79,14 +79,27 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* Phone */}
+                {/* <div className="flex items-start">
                   <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/30 mr-4">
                     <Phone size={20} className="text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
                     <h4 className="font-medium text-slate-900 dark:text-white mb-1">Phone</h4>
-                    <a href="tel:+1234567890" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="tel:+917033642156" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                       +91 7033642156
+                    </a>
+                  </div>
+                </div> */}
+
+                <div className="flex items-start">
+                  <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/30 mr-4">
+                    <LinkedinIcon size={20} className="text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-slate-900 dark:text-white mb-1">LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/meera-sharma-226b2725a/" target='_blank' className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      Meera Sharma
                     </a>
                   </div>
                 </div>
@@ -98,7 +111,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-slate-900 dark:text-white mb-1">Location</h4>
                     <p className="text-slate-600 dark:text-slate-300">
-                      Dheeraj Nagar, Faridabad, Sector-31, Haryana, India
+                      Faridabad, Sector-31, Haryana, India
                     </p>
                   </div>
                 </div>

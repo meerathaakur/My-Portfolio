@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-bold mb-4">
-                <span className="text-blue-400">Dev</span>Portfolio
+                <span className="text-blue-400">My</span>Portfolio
               </h3>
               <p className="text-slate-300 mb-4">
                 Full Stack Web Developer (MERN) specializing in creating responsive, user-friendly applications with clean, efficient code.
@@ -67,9 +67,9 @@ const Footer = () => {
               <p className="text-slate-300 mb-2">
                 meerasrmaa@gmail.com
               </p>
-              <p className="text-slate-300 mb-4">
+              {/* <p className="text-slate-300 mb-4">
                 +91 7033642156
-              </p>
+              </p> */}
               <a
                 href="#contact"
                 className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-300 inline-block"
@@ -81,7 +81,7 @@ const Footer = () => {
 
           <div className="pt-8 border-t border-slate-800 text-center text-slate-400">
             <p className="flex items-center justify-center">
-              © {currentYear} DevPortfolio. Made with <Heart size={16} className="mx-1 text-red-500" /> by Meera Sharma
+              © {currentYear} MyPortfolio. Made with <Heart size={16} className="mx-1 text-red-500" /> by Meera Sharma
             </p>
           </div>
         </div>

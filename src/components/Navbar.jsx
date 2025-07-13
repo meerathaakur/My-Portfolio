@@ -46,7 +46,7 @@ const Navbar = ({ scrollY }) => {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Brand */}
         <a href="#" className="text-xl font-bold">
-          <span className="text-blue-600 dark:text-blue-400">Dev</span>Portfolio
+          <span className="text-blue-600 dark:text-blue-400">My</span>Portfolio
         </a>
 
         {/* Desktop Navigation */}
