@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Github, Code } from 'lucide-react';
 import fitnessBuddy from '/fitness-buddy-home.png'
-import trafficMgmt from '/traffic-dashboard.png'
+// import trafficMgmt from '/traffic-dashboard.png'
 import destinationPlatform from '/destination-platform-home.png'
-import deliveryAPI from '/delivery-api.png'
+// import deliveryAPI from '/delivery-api.png'
 import ProjectCard from './ProjectCard';
 
 const Projects = () => {
@@ -20,16 +20,16 @@ const Projects = () => {
       liveLink: 'https://fitness-buddy-five.vercel.app',
       githubLink: 'https://github.com/meerathaakur/fitness-buddy',
     },
-    {
-      id: 2,
-      title: 'Traffic Management Dashboard',
-      description: 'A real-time traffic management dashboard for monitoring and analyzing traffic patterns.',
-      image: trafficMgmt,
-      tags: ['React', 'firebase API', 'Tailwind CSS', 'Chart.js', 'Redux'],
-      category: 'frontend',
-      liveLink: 'https://traffic-mgmt.vercel.app/dashboard',
-      githubLink: 'https://github.com/meerathaakur/traffic-mgmt',
-    },
+    // {
+    //   id: 2,
+    //   title: 'Traffic Management Dashboard',
+    //   description: 'A real-time traffic management dashboard for monitoring and analyzing traffic patterns.',
+    //   image: trafficMgmt,
+    //   tags: ['React', 'firebase API', 'Tailwind CSS', 'Chart.js', 'Redux'],
+    //   category: 'frontend',
+    //   liveLink: 'https://traffic-mgmt.vercel.app/dashboard',
+    //   githubLink: 'https://github.com/meerathaakur/traffic-mgmt',
+    // },
     {
       id: 3,
       title: 'Destination Platform',
@@ -40,15 +40,15 @@ const Projects = () => {
       liveLink: 'https://destination-platform.vercel.app',
       githubLink: 'https://github.com/meerathaakur/destination-platform',
     },
-    {
-      id: 4,
-      title: 'Basic Delivery API',
-      description: 'A basic Delivery API for managing delivery requests and learning basic API structure with fs module. Using middleware for error handling logging validation.',
-      image: deliveryAPI,
-      tags: ['Node.js', 'Express', 'fs module', 'Middleware'],
-      category: 'backend',
-      githubLink: 'https://github.com/meerathaakur/delivery-api',
-    },
+    // {
+    //   id: 4,
+    //   title: 'Basic Delivery API',
+    //   description: 'A basic Delivery API for managing delivery requests and learning basic API structure with fs module. Using middleware for error handling logging validation.',
+    //   image: deliveryAPI,
+    //   tags: ['Node.js', 'Express', 'fs module', 'Middleware'],
+    //   category: 'backend',
+    //   githubLink: 'https://github.com/meerathaakur/delivery-api',
+    // },
     // {
     //   id: 5,
     //   title: 'Algorithm Visualizer',
@@ -110,7 +110,7 @@ const Projects = () => {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
