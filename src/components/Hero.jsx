@@ -129,9 +129,9 @@ const Hero = () => {
 
           </div>
           <div className="flex gap-2 justify-center items-center">
-            {/* <!-- View Resume Button --> */}
+            {/* <!-- Download Resume Button --> */}
             <a
-              href="https://drive.google.com/uc?export=download&id=1XivVhHXCgQOxAwl6bo4DPORxji-IoAh_"
+              href="https://drive.google.com/uc?export=download&id=1pc-Ra7n-kz4CNEEFG1BBfa9od1lEIRCW"
               target='_blank'
               download
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 dark:bg-slate-800 hover:bg-blue-700 dark:hover:bg-slate-700 text-white font-medium transition-colors duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"

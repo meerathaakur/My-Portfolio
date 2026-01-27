@@ -104,7 +104,7 @@ const Skills = () => {
               { name: 'Node.js', icon: <Braces className="text-green-600" /> },
               { name: 'JavaScript', icon: <Code2 className="text-yellow-500" /> },
               { name: 'TypeScript', icon: <Code2 className="text-blue-600" /> },
-              // { name: 'Redux', icon: <LayoutGrid className="text-purple-500" /> },
+              { name: 'Redux', icon: <LayoutGrid className="text-purple-500" /> },
               { name: 'Git', icon: <Braces className="text-orange-600" /> },
               { name: 'Tailwind', icon: <Laptop className="text-sky-500" /> },
               { name: 'REST APIs', icon: <Globe className="text-indigo-500" /> },

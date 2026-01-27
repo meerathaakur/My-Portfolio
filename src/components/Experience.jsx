@@ -5,33 +5,34 @@ import PropTypes from 'prop-types';
 const Experience = () => {
   const [activeTab, setActiveTab] = useState('education');
 
-  // const workExperience = [
-  //   {
-  //     id: 1,
-  //     title: 'Senior Full Stack Developer',
-  //     organization: 'Tech Innovations Inc.',
-  //     period: 'Jan 2023 - Present',
-  //     description: [
-  //       'Lead developer for a team of 5 engineers building a SaaS platform using the MERN stack',
-  //       'Implemented authentication system with JWT and role-based access control',
-  //       'Optimized database queries resulting in 40% improved performance',
-  //       'Integrated payment processing with Stripe and implemented subscription management',
-  //     ],
-  //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Full Stack Developer',
-  //     organization: 'WebSolutions Co.',
-  //     period: 'Mar 2021 - Dec 2022',
-  //     description: [
-  //       'Developed and maintained multiple client projects using React, Node.js, and MongoDB',
-  //       'Created RESTful APIs with Express.js for mobile and web applications',
-  //       'Implemented real-time features using Socket.io for a collaborative tool',
-  //       'Worked closely with UI/UX designers to implement responsive designs',
-  //     ],
-  //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
-  //   },
+  const workExperience = [
+    {
+      id: 1,
+      title: 'Full Stack Developer',
+      organization: 'Kryptoninc Info lab',
+      period: 'Sep 2024 - Present',
+      description: [
+        'Created working extension for a job board based on HR Services using MERN stack',
+        'Implemented authentication system with JWT and role-based access control',
+        'Implemented queries for monitoring Dashboard on based of different condition',
+        'Created filtration on genrated report based on location using Haversine formula in postgres SQL',
+        'Worked on LMS based platform'
+      ],
+      icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
+    },
+    // {
+    //   id: 2,
+    //   title: 'Full Stack Developer',
+    //   organization: 'WebSolutions Co.',
+    //   period: 'Mar 2021 - Dec 2022',
+    //   description: [
+    //     'Developed and maintained multiple client projects using React, Node.js, and MongoDB',
+    //     'Created RESTful APIs with Express.js for mobile and web applications',
+    //     'Implemented real-time features using Socket.io for a collaborative tool',
+    //     'Worked closely with UI/UX designers to implement responsive designs',
+    //   ],
+    //   icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
+    // },
   //   {
   //     id: 3,
   //     title: 'Frontend Developer',
@@ -45,7 +46,7 @@ const Experience = () => {
   //     ],
   //     icon: <Building2 size={20} className="text-blue-600 dark:text-blue-400" />,
   //   },
-  // ];
+  ];
 
   const education = [
     {
@@ -116,13 +117,13 @@ const Experience = () => {
   // ];
 
   const timelineData = {
-    // work: workExperience,
+    work: workExperience,
     education: education,
     // achievements: achievements,
   };
 
   const tabs = [
-    // { id: 'work', label: 'Work Experience', icon: <Building2 size={20} /> },
+    { id: 'work', label: 'Work Experience', icon: <Building2 size={20} /> },
     { id: 'education', label: 'Education', icon: <GraduationCap size={20} /> },
     // { id: 'achievements', label: 'Achievements', icon: <Award size={20} /> },
   ];
