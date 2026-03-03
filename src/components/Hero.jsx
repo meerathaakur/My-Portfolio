@@ -131,7 +131,7 @@ const Hero = () => {
           <div className="flex gap-2 justify-center items-center">
             {/* <!-- Download Resume Button --> */}
             <a
-              href="https://drive.google.com/uc?export=download&id=1pc-Ra7n-kz4CNEEFG1BBfa9od1lEIRCW"
+              href="https://drive.google.com/uc?export=download&id=1588l5vDh043hpZuvqa5_9FO4E-XaL2fK"
               target='_blank'
               download
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 dark:bg-slate-800 hover:bg-blue-700 dark:hover:bg-slate-700 text-white font-medium transition-colors duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"
@@ -144,7 +144,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a
           href="#about"
           className="flex flex-col items-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -152,7 +152,7 @@ const Hero = () => {
           <span className="text-sm mb-2">Scroll Down</span>
           <ArrowDown size={20} />
         </a>
-      </div>
+      </div> */}
     </section >
   );
 };
