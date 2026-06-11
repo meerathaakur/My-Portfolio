@@ -3,11 +3,18 @@ import { Mail, Phone, MapPin, Send, Loader2, Linkedin, Github, Twitter, Linkedin
 import PropTypes from 'prop-types';
 
 import toast from 'react-hot-toast';
+import emailjs from "@emailjs/browser";
 
 const socialLinks = {
   github: 'https://github.com/meerathaakur',
   linkedin: 'https://www.linkedin.com/in/meera-sharma-226b2725a/',
   twitter: 'https://x.com/meerasrmaa'
+};
+
+const mailConfig = {
+  SERVICE_ID: 'service_ccv9ykn',
+  TEMPLATE_ID: 'template_xdb69xm',
+  PUBLIC_KEY: 'TfDpUyMLCVGBgxiDm'
 };
 
 const Contact = () => {
@@ -27,7 +34,7 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
@@ -37,17 +44,31 @@ const Contact = () => {
       setIsSubmitting(false);
       return;
     }
-
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await emailjs.send(
+        `${mailConfig.SERVICE_ID}`,
+        `${mailConfig.TEMPLATE_ID}`,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        `${mailConfig.PUBLIC_KEY}`
+      )
+      toast.success("Message sent successfully 💌");
       setSubmitted(true);
-      toast.success("Thanks for your message!");
       setFormData({ name: '', email: '', subject: '', message: '' });
 
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
-    }, 1000);
+      setTimeout(() => setSubmitted(false), 3000);
+
+      
+    } catch (error) {
+      console.error(error);
+      setError("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -111,7 +132,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-slate-900 dark:text-white mb-1">Location</h4>
                     <p className="text-slate-600 dark:text-slate-300">
-                      Faridabad, Sector-31, Haryana, India
+                      Ahmadabad, Gujarat, India
                     </p>
                   </div>
                 </div>

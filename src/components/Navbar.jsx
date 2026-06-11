@@ -62,6 +62,18 @@ const Navbar = ({ scrollY }) => {
                 </a>
               </li>
             ))}
+            {/* Resume link */}
+            <li>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1588l5vDh043hpZuvqa5_9FO4E-XaL2fK"
+                target='_blank'
+                download
+                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+
+                Resume
+              </a>
+            </li>
           </ul>
 
           <div className="flex items-center space-x-4">
@@ -104,13 +116,7 @@ const Navbar = ({ scrollY }) => {
 
         {/* Mobile Navigation Button */}
         <div className="flex items-center space-x-4 md:hidden">
-          {/* <button
-            onClick={toggleTheme}
-            className="p-1 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button> */}
+          
           <button
             id="menu-button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -138,9 +144,21 @@ const Navbar = ({ scrollY }) => {
                       onClick={handleNavLinkClick}
                     >
                       {item}
+                      <Download className="w-5 h-5 ml-2" />
                     </a>
                   </li>
                 ))}
+                {/* Resume link */}
+                <li>
+                  <a
+                    href="https://drive.google.com/uc?export=download&id=1588l5vDh043hpZuvqa5_9FO4E-XaL2fK"
+                    target='_blank'
+                    download
+                  >
+                    <Download className="w-5 h-5" />
+                    Resume
+                  </a>
+                </li>
               </ul>
               <div className="flex space-x-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
                 <a

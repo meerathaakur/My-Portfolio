@@ -82,7 +82,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
                   <div className="p-6">
                     <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-4 py-2 rounded-md shadow-lg inline-block">
-                      <p className="font-medium">1500+ hours of coding experience</p>
+                      <p className="font-medium">5 months of working experience</p>
                     </div>
                   </div>
                 </div>

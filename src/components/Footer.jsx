@@ -62,7 +62,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">Get In Touch</h3>
               <p className="text-slate-300 mb-2">
-                Dheeraj Nagar, Faridabad, Sector-31, Haryana, India
+                Ahmadabad, Gujarat, India
               </p>
               <p className="text-slate-300 mb-2">
                 meerasrmaa@gmail.com
